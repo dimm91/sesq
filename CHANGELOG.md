@@ -1,8 +1,8 @@
 # Changelog
 
-## 0.1.0 (unreleased)
+## 0.1.0 (2026-09-25)
 
-First release candidate.
+First release.
 
 - Search Codex and Claude Code sessions from one command: session id, title, folder, prompts and answers.
 - Default word search (case/accent-insensitive, any order), `--fixed` phrase search and guarded `--regex` search.

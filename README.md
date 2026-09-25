@@ -6,7 +6,7 @@ Search your local [Codex](https://github.com/openai/codex) and [Claude Code](htt
 sesq "authentication error"
 ```
 
-> **Status:** 0.1.0 release candidate. Not published to npm yet.
+> **Status:** early release (0.1.x).
 
 Both agents keep their conversations on disk, but each uses different folders and formats, and their built-in pickers mostly search by name, id or recency. `sesq` searches inside prompts and answers of every agent at once, shows the results together (newest first), and hands the chosen session back to the agent's own `resume` command.
 
@@ -23,11 +23,13 @@ GitHub Copilot CLI is planned but **not supported in 0.1**.
 ## Install
 
 ```bash
-npx sesq "text to search"
+npx @dmr01/sesq "text to search"
 # or
-npm install --global sesq
+npm install --global @dmr01/sesq
 sesq "text to search"
 ```
+
+The package is called `@dmr01/sesq`; the command it installs is `sesq`.
 
 ## Usage
 

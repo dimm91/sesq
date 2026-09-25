@@ -1,0 +1,49 @@
+{
+  "name": "sesq",
+  "version": "0.1.0",
+  "description": "Search across local Codex and Claude Code agent sessions and resume the right one.",
+  "keywords": [
+    "codex",
+    "claude-code",
+    "ai-agents",
+    "cli",
+    "session",
+    "search",
+    "resume",
+    "terminal"
+  ],
+  "homepage": "https://github.com/dimm91/sesq#readme",
+  "bugs": {
+    "url": "https://github.com/dimm91/sesq/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimm91/sesq.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "sesq": "dist/cli/main.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.js",
+    "!dist/**/*.map"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "pretest": "npm run build",
+    "test": "node scripts/run-tests.mjs",
+    "start": "node dist/cli/main.js",
+    "prepublishOnly": "npm test",
+    "test:e2e": "npm run build && python3 scripts/e2e-tty.py",
+    "bench": "npm run build && node scripts/benchmark.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.5",
+    "typescript": "^5.9.3"
+  }
+}
